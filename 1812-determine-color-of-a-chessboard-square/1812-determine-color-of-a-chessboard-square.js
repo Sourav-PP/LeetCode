@@ -15,4 +15,8 @@ var squareIsWhite = function(coordinates) {
     if(Number(coordinates[0].charCodeAt(0))%2 != 0 && Number(coordinates[1]%2 == 0 )) {
         return true
     }
+
+    // const squareIsWhite = (coordinates) => {
+    // return coordinates[0].charCodeAt(0) % 2 !== parseInt(coordinates[1]) % 2;
+    // }
 };
