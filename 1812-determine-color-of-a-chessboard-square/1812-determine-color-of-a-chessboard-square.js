@@ -7,7 +7,7 @@ var squareIsWhite = function(coordinates) {
         return false
     }
     if(Number(coordinates[0].charCodeAt(0))%2 != 0 && Number(coordinates[1]%2 != 0 )) {
-        return true
+        return false
     }
     if(Number(coordinates[0].charCodeAt(0))%2 == 0 && Number(coordinates[1])%2 != 0){
         return true
