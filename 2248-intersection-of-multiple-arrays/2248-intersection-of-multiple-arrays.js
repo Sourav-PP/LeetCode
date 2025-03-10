@@ -5,7 +5,6 @@
 var intersection = function(nums) {
     let map = new Map()
     let totalArray = nums.length
-    let result = []
 
     for(let arr of nums) {
         let seen = new Set()
@@ -17,7 +16,7 @@ var intersection = function(nums) {
         }
     }
 
-
+    let result = []
     for(let [key,value] of map) {
         if(value === totalArray) {
             result.push(key)
