@@ -24,5 +24,5 @@ var intersection = function(nums) {
         }
     }
 
-    return result
+    return result.sort((a,b) => a-b)
 };
