@@ -29,7 +29,7 @@ MyCircularQueue.prototype.deQueue = function() {
  * @return {number}
  */
 MyCircularQueue.prototype.Front = function() {
-    if(this.queue.length === 0) return false
+    if(this.queue.length === 0) return -1
     return this.queue[0]
 };
 
