@@ -3,14 +3,11 @@
  * @return {number[][]}
  */
 var flipAndInvertImage = function(image) {
-    const flipped = image.map(item => {
-        return item.reverse()
+    let result = image.map(item => {
+        return item.reverse().map(item => {
+            return item === 1 ? 0 : 1
+        })
     })
 
-    const inverted = flipped.map(items => {
-        const invert = items.map(item => item == 1 ? 0 : 1)
-        return invert
-    })
-
-    return inverted
+    return result
 };
