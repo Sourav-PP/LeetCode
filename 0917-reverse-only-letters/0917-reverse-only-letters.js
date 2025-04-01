@@ -12,13 +12,9 @@ var reverseOnlyLetters = function(s) {
             i ++
             j --
         }else if(!arr[i].match(/[a-zA-Z]/)) {
-            [arr[i+1], arr[j]] = [arr[j], arr[i+1]]
-            i+=2
-            j--
-        }else if(!arr[j].match(/[a-zA-Z]/)) {
-            [arr[j-1], arr[i]] = [arr[i], arr[j-1]]
             i++
-            j-=2
+        }else if(!arr[j].match(/[a-zA-Z]/)) {
+            j--
         }else{
             [arr[i], arr[j]] = [arr[j],arr[i]]
             i++
