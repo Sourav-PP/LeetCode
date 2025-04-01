@@ -3,25 +3,14 @@
  * @return {string}
  */
 var reverseOnlyLetters = function(s) {
-    let i = 0;
-    let j = s.length - 1
-    let arr = s.split('')
-
-    while(i <= j) {
-        if(!arr[i].match(/[a-zA-Z]/) && !arr[j].match(/[a-zA-Z]/)) {
-            i ++
-            j --
-        }else if(!arr[i].match(/[a-zA-Z]/)) {
-            i++
-        }else if(!arr[j].match(/[a-zA-Z]/)) {
-            j--
+    let stack = s.split('').filter(ch => /[a-zA-Z]/.test(ch))
+    let arr = []
+    for(let i=0; i<s.length; i++) {
+        if(/[a-zA-Z]/.test(s[i])) {
+            arr.push(stack.pop())
         }else{
-            [arr[i], arr[j]] = [arr[j],arr[i]]
-            i++
-            j--
+            arr.push(s[i])
         }
     }
-
     return arr.join('')
-
 };
